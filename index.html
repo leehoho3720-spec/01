@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목동아이비학원 - 22년 전통 중하위권 역전 전문 | 재수 수능기초반</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Noto Sans KR & Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#06101E',
+                            800: '#0A192F',
+                            700: '#0F2342',
+                            600: '#16315C',
+                        },
+                        gold: {
+                            400: '#E6C665',
+                            500: '#D4AF37',
+                            600: '#C5A059',
+                            700: '#A38038',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                        mont: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #06101E;
+            color: #E2E8F0;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FDF0A6 0%, #D4AF37 50%, #997825 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #D4AF37, #997825) 1;
+        }
+        .bg-glass {
+            background: rgba(15, 35, 66, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .bg-glass-card {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .bg-glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.15);
+        }
+        .gold-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #B89028 100%);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #E6C665 0%, #D4AF37 100%);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-navy-900 pb-20 md:pb-0">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center font-bold text-navy-900 text-xl font-mont shadow-md">
+                    IVY
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-black tracking-tight text-white block leading-tight">목동아이비학원</span>
+                    <span class="text-[10px] text-gold-400 font-mont tracking-widest uppercase block font-semibold">Mokdong Ivy Academy</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-300">
+                <a href="#about" class="hover:text-gold-400 transition">학원소개</a>
+                <a href="#features" class="hover:text-gold-400 transition">6대 핵심강점</a>
+                <a href="#system" class="hover:text-gold-400 transition">1:1 밀착케어</a>
+                <a href="#schedule" class="hover:text-gold-400 transition">커리큘럼 & 하루일과</a>
+                <a href="#location" class="hover:text-gold-400 transition">오시는 길</a>
+            </nav>
+
+            <!-- Header Action Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="tel:0220659331" class="text-gold-400 font-mont font-bold flex items-center gap-2 hover:text-white transition">
+                    <i class="fa-solid fa-phone"></i> 02-2065-9331
+                </a>
+                <a href="#consulting" class="gold-btn text-navy-900 font-bold px-5 py-2.5 rounded-full text-sm">
+                    1:1 심층상담 신청
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-slate-300 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-900/95 border-b border-gold-500/20 px-4 py-6 space-y-4 text-center">
+            <a href="#about" class="block text-slate-200 hover:text-gold-400 font-medium text-lg py-2">학원소개</a>
+            <a href="#features" class="block text-slate-200 hover:text-gold-400 font-medium text-lg py-2">6대 핵심강점</a>
+            <a href="#system" class="block text-slate-200 hover:text-gold-400 font-medium text-lg py-2">1:1 밀착케어</a>
+            <a href="#schedule" class="block text-slate-200 hover:text-gold-400 font-medium text-lg py-2">커리큘럼 & 하루일과</a>
+            <a href="#location" class="block text-slate-200 hover:text-gold-400 font-medium text-lg py-2">오시는 길</a>
+            <a href="#consulting" class="inline-block w-full gold-btn text-navy-900 font-bold py-3 rounded-full text-base mt-2">
+                1:1 심층상담 신청하기
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden flex items-center justify-center">
+        <!-- Background Ornaments -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-navy-700/30 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-10 right-10 w-72 h-72 bg-gold-500/10 rounded-full blur-[90px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs sm:text-sm font-semibold mb-6">
+                <span class="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+                <span>22년 전통 · 목동 중하위권 수능 역전 NO.1</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight sm:leading-snug mb-6">
+                어설픈 대형강의는 끝났다.<br>
+                <span class="gold-gradient-text">10명 내외 소수정예</span>로 만드는 역전의 기적
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-slate-300 text-base sm:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                중하위권의 진짜 약점을 파악하고 1:1 밀착 케어로 완성하는<br class="hidden sm:block">
+                <strong class="font-semibold text-white">2027학년도 재수 수능기초반</strong> 전격 대개강
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#consulting" class="w-full sm:w-auto gold-btn text-navy-900 font-extrabold px-8 py-4 rounded-xl text-lg flex items-center justify-center gap-2">
+                    <span>수능기초반 상담 예약하기</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="tel:0220659331" class="w-full sm:w-auto bg-navy-800 hover:bg-navy-700 text-white font-semibold border border-slate-700 px-8 py-4 rounded-xl text-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-gold-400"></i>
+                    <span>전화 문의 (02-2065-9331)</span>
+                </a>
+            </div>
+
+            <!-- Key Feature Highlights Pill -->
+            <div class="mt-14 pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="bg-navy-800/50 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-gold-400 text-2xl sm:text-3xl font-extrabold font-mont mb-1">22 Years</div>
+                    <div class="text-xs sm:text-sm text-slate-400">중하위권 지도 22년 전통</div>
+                </div>
+                <div class="bg-navy-800/50 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-gold-400 text-2xl sm:text-3xl font-extrabold font-mont mb-1">~10 명</div>
+                    <div class="text-xs sm:text-sm text-slate-400">반별 10명 내외 소수정예</div>
+                </div>
+                <div class="bg-navy-800/50 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-gold-400 text-2xl sm:text-3xl font-extrabold font-mont mb-1">100 %</div>
+                    <div class="text-xs sm:text-sm text-slate-400">원장 & 강사 1:1 밀착밀착</div>
+                </div>
+                <div class="bg-navy-800/50 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-gold-400 text-2xl sm:text-3xl font-extrabold font-mont mb-1">1:1 Seat</div>
+                    <div class="text-xs sm:text-sm text-slate-400">전용 고정 1인 자습실</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-navy-900 border-t border-slate-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Intro text -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 rounded text-xs font-semibold uppercase tracking-wider">Why Mokdong IVY</div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+                        대형학원 수강생 80%가 들러리가 되는 현실,<br>
+                        <span class="gold-gradient-text">목동아이비는 오직 '학생 한 명'에 집중합니다.</span>
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed font-light">
+                        개념 이해도 없이 넘어가는 일방적인 대형 강의는 성적 변화를 만들어낼 수 없습니다. 
+                        목동아이비학원은 22년간 오직 중위권·하위권 학생들의 확실한 등급 상승만을 연구해 왔습니다.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed font-light">
+                        기초 개념 재설립부터 당일 과제 완수 검사, 그리고 몰입 자습까지. 
+                        원장과 과목별 강진이 매일 학생 한 명 한 명의 학습 상태를 직접 챙깁니다.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">질문이 자유로운 분위기</h4>
+                                <p class="text-xs text-slate-400">모르는 것은 그 자리에서 바로 해결하는 소규모 수강 환경</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">수준별/과목별 맞춤 클리닉</h4>
+                                <p class="text-xs text-slate-400">취약 과목은 기초부터, 강점 과목은 심화까지 분리</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-navy-800 to-navy-700 p-8 rounded-2xl border border-gold-500/30 shadow-2xl relative">
+                        <div class="absolute -top-4 -right-4 bg-gold-500 text-navy-900 text-xs font-black px-4 py-1.5 rounded-full shadow-lg">
+                            SPECIAL POINT
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-6 border-b border-slate-700 pb-4">
+                            <i class="fa-solid fa-graduation-cap text-gold-400 mr-2"></i> 재수 수능기초반 특별케어
+                        </h3>
+                        <ul class="space-y-4 text-sm text-slate-200">
+                            <li class="flex items-center justify-between p-3 bg-navy-900/60 rounded-lg">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-user-gear text-gold-400"></i> 원장 직접 1:1 상담 및 전담 케어</span>
+                                <span class="text-xs bg-gold-500/20 text-gold-300 px-2 py-0.5 rounded">매일</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-navy-900/60 rounded-lg">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-gold-400"></i> 당일 과제 미달 시 1:1 재시험 & 남김 학습</span>
+                                <span class="text-xs bg-gold-500/20 text-gold-300 px-2 py-0.5 rounded">의무</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-navy-900/60 rounded-lg">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-chair text-gold-400"></i> 나만의 독서실형 고정 자습 좌석</span>
+                                <span class="text-xs bg-gold-500/20 text-gold-300 px-2 py-0.5 rounded">제공</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-navy-900/60 rounded-lg">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-chart-line text-gold-400"></i> 매월 수능 성적 변화 추적 리포트</span>
+                                <span class="text-xs bg-gold-500/20 text-gold-300 px-2 py-0.5 rounded">발송</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 KEY FEATURES SECTION -->
+    <section id="features" class="py-20 bg-navy-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mont font-bold text-gold-400 tracking-widest uppercase mb-2">Core Advantages</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">중하위권 성적 역전을 위한 <span class="gold-gradient-text">6대 핵심 시스템</span></p>
+                <p class="text-slate-400 mt-4 text-sm sm:text-base">목동아이비학원만의 엄격하고 촘촘한 관리가 성적 향상의 확실한 차이를 만듭니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">22년 전통 중하위권 노하우</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        오랜 기간 중위권 및 하위권 학생들의 고충을 연구하여, 기초부터 빈틈없이 수능 실전 체급으로 끌어올리는 특화 커리큘럼 보유.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">10명 내외 소수정예 반구성</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        한 반 인원을 10명 내외로 제한하여 강사가 학생 한 명 한 명의 눈빛과 이해도를 파악. 질문이 살아 숨 쉬는 수업 환경을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">과목별 · 수준별 맞춤 수업</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        국어, 수학, 영어 취약 영역에 맞춰 과목별 세부 수준 반 편성을 진행. 취약 단점은 보완하고 강점 영역은 고득점 전략 구축.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        04
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">원장 & 강사 1:1 밀착 관리</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        수업만 하고 끝나는 강사가 아닌, 원장과 과목 강사가 학생의 수험 생활 전반, 오답 원인 분석, 멘탈 케어까지 1:1 전담 관리합니다.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        05
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">당일 과제 완수 및 1:1 검사</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        '그날 배운 것은 그날 완벽히 이해한다'는 원칙 하에 당일 부여된 과제는 전량 제출 후 강사의 1:1 검사를 통과해야 귀가 가능합니다.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-gold-500 group-hover:text-navy-900 transition-colors">
+                        06
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">전용 자습실로 집중력 배가</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        학원 이동 없이 바로 공부로 이어지는 고정 1인 전용 자습실 완비. 엄격한 스마트폰 제출 및 감독관 상주로 몰입감 극대화.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 1:1 CLOSE CARE SYSTEM SECTION -->
+    <section id="system" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-gold-400 text-sm font-semibold tracking-wider">INTENSIVE CARE SYSTEM</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-2 mb-6">
+                        "알 때까지 안 보냅니다"<br>
+                        <span class="gold-gradient-text">당일 과제 Complete 시스템</span>
+                    </h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        학습 실패의 가장 큰 원인은 '이해했다고 착각하고 넘어가기' 때문입니다. 목동아이비는 3단계 밀착 검사로 모르는 문제를 단 1개도 남기지 않습니다.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Step 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-900 font-bold flex items-center justify-center shrink-0">1</div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">일일 백지 테스트 & 개념 재확인</h4>
+                                <p class="text-slate-400 text-sm mt-1">수업 직후 핵심 공식과 개념을 백지에 스스로 써보며 암기 및 이해도 체크</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-900 font-bold flex items-center justify-center shrink-0">2</div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">1:1 질의응답 & 맞춤 오답노트</h4>
+                                <p class="text-slate-400 text-sm mt-1">담당 강사가 직접 학생별 오답 원인을 피드백하고 유사 문제 추가 제공</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-900 font-bold flex items-center justify-center shrink-0">3</div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">최종 과제 완수 도장 후 하원</h4>
+                                <p class="text-slate-400 text-sm mt-1">목표 분량을 미달하거나 테스트 불통 시 재시험 후 완벽 성취 시 귀가 승인</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Box -->
+                <div class="bg-navy-800 p-6 sm:p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-gold-400"></i> 목동아이비 재수생 하루 일과 (표준)
+                    </h3>
+                    
+                    <div class="space-y-3 font-mono text-xs sm:text-sm">
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-gold-500">
+                            <span class="text-gold-300 font-bold">08:30 - 08:50</span>
+                            <span class="text-slate-200">등원 및 등원 등교 태그, 핸드폰 제출</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-slate-600">
+                            <span class="text-slate-400">09:00 - 12:30</span>
+                            <span class="text-slate-200">오전 과목별 소수정예 집중 수업 (국/수)</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-slate-600">
+                            <span class="text-slate-400">12:30 - 13:30</span>
+                            <span class="text-slate-200">점심 식사 및 영양 멘탈 케어</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-slate-600">
+                            <span class="text-slate-400">13:30 - 17:00</span>
+                            <span class="text-slate-200">오후 테마 수업 (영/탐) & 1:1 클리닉</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-gold-500">
+                            <span class="text-gold-300 font-bold">17:00 - 18:00</span>
+                            <span class="text-slate-200">당일 백지 테스트 및 과제 1:1 검사</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-slate-600">
+                            <span class="text-slate-400">18:00 - 19:00</span>
+                            <span class="text-slate-200">저녁 식사</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-navy-900 border-l-4 border-gold-500">
+                            <span class="text-gold-300 font-bold">19:00 - 22:00</span>
+                            <span class="text-slate-200">1인 전용 자습실 의무 심야 몰입 자습</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM ROADMAP SECTION -->
+    <section id="schedule" class="py-20 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mont font-bold text-gold-400 tracking-widest uppercase mb-2">Annual Roadmap</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">2027 수능 완벽 대비 <span class="gold-gradient-text">단계별 커리큘럼</span></p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-navy-900 p-5 rounded-xl border-l-4 border-gold-500 text-left">
+                    <span class="text-xs font-mont text-gold-400 font-bold">STAGE 1</span>
+                    <h4 class="font-bold text-white text-lg mt-1">수능 기초/개념 완벽 구축</h4>
+                    <p class="text-xs text-slate-400 mt-2">교과서 기본 개념 파악 및 수능 필수 어휘/정의 재정립</p>
+                </div>
+                <div class="bg-navy-900/60 p-5 rounded-xl border-l-4 border-slate-700 text-left">
+                    <span class="text-xs font-mont text-slate-500 font-bold">STAGE 2</span>
+                    <h4 class="font-bold text-white text-lg mt-1">유형별 기출 문제 분석</h4>
+                    <p class="text-xs text-slate-400 mt-2">최근 5개년 평가원 핵심 기출 유형 정복 및 오답 패턴 교정</p>
+                </div>
+                <div class="bg-navy-900/60 p-5 rounded-xl border-l-4 border-slate-700 text-left">
+                    <span class="text-xs font-mont text-slate-500 font-bold">STAGE 3</span>
+                    <h4 class="font-bold text-white text-lg mt-1">약점 집중 심화 & 킬러</h4>
+                    <p class="text-xs text-slate-400 mt-2">준킬러/킬러 문항 집중 훈련 및 과목별 맞춤 클리닉</p>
+                </div>
+                <div class="bg-navy-900/60 p-5 rounded-xl border-l-4 border-slate-700 text-left">
+                    <span class="text-xs font-mont text-slate-500 font-bold">STAGE 4</span>
+                    <h4 class="font-bold text-white text-lg mt-1">실전 실전 파이널 모의고사</h4>
+                    <p class="text-xs text-slate-400 mt-2">실제 시험장 동일 환경 모의고사 실전 훈련 & 최종 점검</p>
+                </div>
+            </div>
+
+            <!-- Notice Banner -->
+            <div class="bg-gradient-to-r from-gold-500/10 via-gold-500/20 to-gold-500/10 border border-gold-500/30 rounded-xl p-6 text-center">
+                <p class="text-gold-300 font-semibold text-base sm:text-lg">
+                    <i class="fa-solid fa-bullhorn mr-2"></i> [재수 수능기초반] 반별 10명 선착순 마감 예정! 지금 상담 신청하세요.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white text-center mb-12">자주 묻는 질문 (FAQ)</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-navy-800 rounded-xl border border-slate-700 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-white flex justify-between items-center focus:outline-none faq-btn">
+                        <span>Q. 노베이스 또는 기초가 부족한 학생도 따라갈 수 있나요?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="p-5 pt-0 text-slate-300 text-sm leading-relaxed hidden faq-content border-t border-slate-700/50 mt-2">
+                        네, 가능합니다. 목동아이비학원은 22년간 중하위권 수험생을 전문으로 지도해 온 학원입니다. 학생 수준에 맞는 기초 개념부터 1:1 맞춤 피드백을 통해 차근차근 등급을 끌어올립니다.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-navy-800 rounded-xl border border-slate-700 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-white flex justify-between items-center focus:outline-none faq-btn">
+                        <span>Q. 10명 내외 소수정예 반의 장점은 무엇인가요?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="p-5 pt-0 text-slate-300 text-sm leading-relaxed hidden faq-content border-t border-slate-700/50 mt-2">
+                        대형학원에서는 질문하기 어렵고 강사가 개별 학생의 취약점을 파악하기 힘듭니다. 소수정예 반은 수업 중 이해도 확인은 물론 자유로운 질의응답과 세심한 과제 관리가 가능합니다.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-navy-800 rounded-xl border border-slate-700 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-white flex justify-between items-center focus:outline-none faq-btn">
+                        <span>Q. 자습실 이용 및 휴대폰 관리는 어떻게 이루어지나요?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="p-5 pt-0 text-slate-300 text-sm leading-relaxed hidden faq-content border-t border-slate-700/50 mt-2">
+                        등원 즉시 휴대폰은 수거되며 하원 시 반납됩니다. 개인 전용 고정 독서실 좌석이 부여되며, 학습에 몰입할 수 있도록 엄격한 생활 감독관이 상주 관리합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSULTING FORM SECTION -->
+    <section id="consulting" class="py-20 bg-navy-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-glass p-8 sm:p-12 rounded-3xl border border-gold-500/30 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="text-gold-400 text-sm font-bold tracking-widest uppercase">Consulting Reservation</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2">재수 수능기초반 1:1 방문상담 신청</h2>
+                    <p class="text-slate-400 text-sm mt-2">상담 신청을 남겨주시면 원장님이 직접 확인 후 성적 역전 전략 안내 연락을 드립니다.</p>
+                </div>
+
+                <form id="consultForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-slate-300 text-sm font-medium mb-2">학생 이름 *</label>
+                            <input type="text" required placeholder="홍길동" class="w-full bg-navy-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 text-sm font-medium mb-2">학부모/학생 연락처 *</label>
+                            <input type="tel" required placeholder="010-0000-0000" class="w-full bg-navy-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-slate-300 text-sm font-medium mb-2">현재 평균 등급대</label>
+                            <select class="w-full bg-navy-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                                <option>3~4등급대</option>
+                                <option>5~6등급대</option>
+                                <option>7등급 이하 (기초 필요)</option>
+                                <option>기타</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 text-sm font-medium mb-2">상담 희망 시간대</label>
+                            <select class="w-full bg-navy-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                                <option>평일 오전 (10:00 ~ 12:00)</option>
+                                <option>평일 오후 (14:00 ~ 18:00)</option>
+                                <option>평일 저녁 (19:00 ~ 21:00)</option>
+                                <option>주말 상담 희망</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-300 text-sm font-medium mb-2">궁금한 사항 또는 취약 과목 (선택)</label>
+                        <textarea rows="3" placeholder="예) 수학 기초가 많이 부족합니다. 국어 독해법을 배우고 싶습니다." class="w-full bg-navy-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full gold-btn text-navy-900 font-extrabold py-4 rounded-xl text-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>상담 신청서 제출하기</span>
+                    </button>
+                </form>
+
+                <!-- Success Alert Box (Hidden by default) -->
+                <div id="successMsg" class="hidden mt-6 bg-emerald-900/80 border border-emerald-500 text-emerald-200 p-4 rounded-xl text-center font-medium">
+                    <i class="fa-solid fa-circle-check text-xl mb-1 block"></i>
+                    상담 신청이 정상적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT FOOTER -->
+    <section id="location" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Info -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-extrabold text-white">오시는 길 & 문의안내</h2>
+                    <p class="text-slate-300 text-sm">목동아이비학원은 지하철역과 가까워 등하원이 편리합니다.</p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">학원 주소</h4>
+                                <p class="text-slate-400 text-sm mt-1">서울 양천구 오목로 224 (오목교역/목동역 인근)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">전화 문의</h4>
+                                <p class="text-gold-400 font-bold text-lg mt-0.5">02-2065-9331</p>
+                                <p class="text-slate-400 text-xs">상담 시간: 평일 10:00 ~ 22:00 / 주말 상담 가능</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-train"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">대중교통 안내</h4>
+                                <p class="text-slate-400 text-sm mt-1">5호선 목동역 및 오목교역 도보 접근 용이</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Stylized UI Card -->
+                <div class="bg-navy-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div class="relative w-full h-64 bg-navy-900 rounded-xl overflow-hidden border border-slate-700 flex items-center justify-center">
+                        <!-- Stylized Map Graphic -->
+                        <div class="text-center p-6">
+                            <i class="fa-solid fa-map-location-dot text-5xl text-gold-400 mb-3"></i>
+                            <h3 class="text-white font-bold text-lg">서울 양천구 오목로 224</h3>
+                            <p class="text-slate-400 text-xs mt-1">목동아이비학원 본관</p>
+                            <a href="https://map.naver.com" target="_blank" class="inline-block mt-4 bg-gold-500/20 text-gold-300 border border-gold-500/40 text-xs px-4 py-2 rounded-lg font-semibold hover:bg-gold-500 hover:text-navy-900 transition">
+                                네이버 지도에서 위치 보기 <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-xs text-slate-400 text-center">
+                        ※ 방문 상담 시 주차 공간 안내를 위해 사전 전화 문의 부탁드립니다.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-900 border-t border-slate-800/80 py-8 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+            <p class="font-bold text-slate-400">목동아이비학원 | 대표번호: 02-2065-9331</p>
+            <p>주소: 서울 양천구 오목로 224 | 사업 분야: 수능/재수/입시 단과 및 소수정예 전문</p>
+            <p class="pt-2 text-slate-600">Copyright ⓒ Mokdong IVY Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING QUICK CONTACT BAR FOR MOBILE -->
+    <div class="fixed bottom-0 left-0 w-full bg-navy-900/95 border-t border-gold-500/30 p-3 md:hidden z-40 flex gap-2">
+        <a href="tel:0220659331" class="flex-1 bg-navy-800 text-gold-400 border border-gold-500/40 font-bold py-3 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone"></i> 전화 문의
+        </a>
+        <a href="#consulting" class="flex-1 gold-btn text-navy-900 font-extrabold py-3 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+            <i class="fa-solid fa-calendar-check"></i> 상담 예약
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTION -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successMsg = document.getElementById('successMsg');
+            successMsg.classList.remove('hidden');
+            document.getElementById('consultForm').reset();
+            
+            setTimeout(() => {
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
